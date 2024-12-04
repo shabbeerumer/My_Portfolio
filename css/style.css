@@ -498,3 +498,31 @@ body {
       justify-content: center;
   }
 }
+
+.what-i-offer-section .card {
+  background: var(--dark-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.what-i-offer-section .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.what-i-offer-section .text-highlight {
+  color: var(--highlight);
+}
+
+.skill-progress {
+  height: 1.5rem;
+  border-radius: 8px;
+}
+
+.skill-name {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-white);
+}
