@@ -6,7 +6,8 @@
 }
 
 body {
-  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
   background-color: var(--dark-bg);
   color: var(--text-color);
   font-family: 'Inter', sans-serif;
@@ -517,7 +518,7 @@ body {
   color: var(--highlight);
 }
 
-.skill-progress {
+/* .skill-progress {
   height: 1.5rem;
   border-radius: 8px;
 }
@@ -526,7 +527,7 @@ body {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   color: var(--text-white);
-}
+} */
 
 .education-section .card {
   background: linear-gradient(135deg, rgba(45, 27, 105, 0.6), rgba(45, 27, 105, 0.2));
@@ -587,7 +588,7 @@ body {
     position: absolute;
     right: -5px;
     top: -17px;
-    width: 50px;
+    width: 20%;
     height: 50px;
     border-radius: 50%;
     background: var(--dark-bg);
