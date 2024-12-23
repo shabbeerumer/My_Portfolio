@@ -484,6 +484,10 @@ body {
 }
 
 @media (max-width: 768px) {
+ .sub-title{
+  text-align: center;
+ }
+  
   .contact {
       padding: 3rem 0;
   }
@@ -618,3 +622,13 @@ from {
   transition: all 2s ease-in-out;
 } 
 }
+
+@media only screen and (max-width: 768px) {
+  HTML, body {
+      width: 100%;
+      overflow-x: hidden;
+  }}
+
+  html, body {
+    width: 100%;
+    overflow-x: hidden;} 
