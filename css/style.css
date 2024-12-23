@@ -487,6 +487,10 @@ body {
  .sub-title{
   text-align: center;
  }
+
+ .progress .progress-value{
+  width: 27% !important;
+ }
   
   .contact {
       padding: 3rem 0;
