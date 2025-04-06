@@ -17,6 +17,25 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Google AdSense Code - Replace with your actual AdSense code when ready -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"
+    crossorigin="anonymous"></script>
+  <style>
+    .ad-container {
+      margin: 2rem auto;
+      text-align: center;
+      max-width: 800px;
+    }
+
+    .ad-disclaimer {
+      color: #6c757d;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+  </style>
 </head>
 
 <body>
@@ -279,7 +298,7 @@
             <p class="project-description">
               ShopyKart is a fully responsive eCommerce website designed using
               HTML, CSS, and Bootstrap. The site offers a clean, modern design
-              with a user-friendly interface. It’s suitable for any kind of
+              with a user-friendly interface. It's suitable for any kind of
               online store and is optimized for all screen sizes, ensuring a
               seamless shopping experience across devices.
             </p>
@@ -334,13 +353,26 @@
     </div>
   </section>
 
+  <!-- Google AdSense Ad Slot -->
+  <div class="container ad-container">
+    <div class="ad-disclaimer">
+      <small>Advertisement</small>
+    </div>
+    <div class="ad-slot">
+      <!-- Replace this comment with your actual AdSense code when you have it -->
+      <div style="background-color: #f8f9fa; padding: 20px; border-radius: 5px; border: 1px dashed #ced4da;">
+        <p class="mb-0">Ad Space - Your Advertisement Could Be Here</p>
+      </div>
+    </div>
+  </div>
+
   <section class="contact">
     <div class="container">
       <h2 class="contact-title">Contact</h2>
 
       <div class="contact-content">
         <p class="contact-text text-start">
-          Have a project in mind? Let’s connect and bring it to life!
+          Have a project in mind? Let's connect and bring it to life!
         </p>
 
         <a href="mailto:shabbeerumer@gmail.com" class="email-link text-start">
@@ -397,6 +429,81 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
+  </script>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-consent-banner" class="cookie-banner ">
+    <div class="cookie-content ms-5">
+      <p>This website uses cookies to ensure you get the best experience on our website. By continuing to use this site,
+        you consent to the use of cookies and agree to our <a href="pages/privacy-policy.html">Privacy Policy</a>.</p>
+      <div class="cookie-buttons">
+        <button id="cookie-accept" class="cookie-btn accept">Accept</button>
+        <button id="cookie-decline" class="cookie-btn decline">Decline</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section with Legal Pages -->
+  <footer class="footer py-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h5>My Portfolio</h5>
+          <p>Building responsive websites and dynamic web applications.</p>
+        </div>
+        <div class="col-md-6">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="pages/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="pages/terms-conditions.html">Terms and Conditions</a></li>
+            <li><a href="pages/about.html">About Me</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+            <li><a href="pages/blog.html">Blog</a></li>
+            <li><a href="pages/projects.html">Detailed Projects</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-12 text-center">
+          <p class="copyright">&copy; 2024 Umer Shabbeer. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Cookie Consent Banner
+    document.addEventListener('DOMContentLoaded', function () {
+      const cookieBanner = document.getElementById('cookie-consent-banner');
+      const acceptBtn = document.getElementById('cookie-accept');
+      const declineBtn = document.getElementById('cookie-decline');
+
+      // Check if user has already made a choice
+      if (!localStorage.getItem('cookieConsent')) {
+        // Show the banner after a slight delay
+        setTimeout(function () {
+          cookieBanner.style.display = 'block';
+        }, 1000);
+      }
+
+      // Handle accept button click
+      acceptBtn.addEventListener('click', function () {
+        localStorage.setItem('cookieConsent', 'accepted');
+        cookieBanner.style.display = 'none';
+
+        // Here you would initialize cookies and tracking scripts
+        // For example, initialize Google Analytics or AdSense
+      });
+
+      // Handle decline button click
+      declineBtn.addEventListener('click', function () {
+        localStorage.setItem('cookieConsent', 'declined');
+        cookieBanner.style.display = 'none';
+
+        // Here you would disable tracking cookies
+        // For example, you could set a flag to disable analytics
+      });
+    });
   </script>
 </body>
 
