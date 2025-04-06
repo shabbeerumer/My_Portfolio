@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <style>
+        .blog-section {
+            padding: 4rem 0;
+        }
+
+        .blog-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .blog-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .blog-image {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-date {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-tags {
+            margin-bottom: 1rem;
+        }
+
+        .blog-tag {
+            display: inline-block;
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #212529;
+        }
+
+        .blog-excerpt {
+            color: #6c757d;
+            margin-bottom: 1rem;
+        }
+
+        .blog-link {
+            color: #6c63ff;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .blog-link:hover {
+            text-decoration: underline;
+        }
+
+        .blog-link i {
+            margin-left: 0.5rem;
+            transition: transform 0.3s;
+        }
+
+        .blog-link:hover i {
+            transform: translateX(3px);
+        }
+
+        .category-filter {
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            border: none;
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background-color: #6c63ff;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand text-white" href="../index.html">My Portfolio</a>
+        </div>
+    </nav>
+
+    <section class="blog-section">
+        <div class="container blog-container">
+            <h1 class="text-center mb-5" data-aos="fade-up">Blog</h1>
+
+            <div class="category-filter text-center" data-aos="fade-up">
+                <h5 class="mb-3">Filter by Category</h5>
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">HTML & CSS</button>
+                <button class="filter-btn">JavaScript</button>
+                <button class="filter-btn">PHP & Laravel</button>
+                <button class="filter-btn">Web Development</button>
+            </div>
+
+            <div class="row" data-aos="fade-up">
+                <!-- Blog Post 1 -->
+                <div class="col-md-6 mb-4">
+                    <div class="blog-card">
+                        <img src="https://via.placeholder.com/600x400/6c63ff/ffffff?text=Responsive+Design"
+                            alt="Responsive Design" class="blog-image">
+                        <div class="blog-content">
+                            <div class="blog-date">
+                                <i class="far fa-calendar-alt me-1"></i> April 1, 2024
+                            </div>
+                            <div class="blog-tags">
+                                <span class="blog-tag">HTML & CSS</span>
+                                <span class="blog-tag">Responsive</span>
+                            </div>
+                            <h3 class="blog-title">Mastering Responsive Web Design with CSS Grid</h3>
+                            <p class="blog-excerpt">Learn how to create flexible and responsive layouts using CSS Grid,
+                                the most powerful layout system available in CSS today.</p>
+                            <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="col-md-6 mb-4">
+                    <div class="blog-card">
+                        <img src="https://via.placeholder.com/600x400/6c63ff/ffffff?text=JavaScript+Fundamentals"
+                            alt="JavaScript Fundamentals" class="blog-image">
+                        <div class="blog-content">
+                            <div class="blog-date">
+                                <i class="far fa-calendar-alt me-1"></i> March 25, 2024
+                            </div>
+                            <div class="blog-tags">
+                                <span class="blog-tag">JavaScript</span>
+                                <span class="blog-tag">Web Development</span>
+                            </div>
+                            <h3 class="blog-title">JavaScript ES6 Features Every Developer Should Know</h3>
+                            <p class="blog-excerpt">Discover the most important ES6 features that will improve your
+                                JavaScript code and make you a more efficient developer.</p>
+                            <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 3 -->
+                <div class="col-md-6 mb-4">
+                    <div class="blog-card">
+                        <img src="https://via.placeholder.com/600x400/6c63ff/ffffff?text=Laravel+Tutorial"
+                            alt="Laravel Tutorial" class="blog-image">
+                        <div class="blog-content">
+                            <div class="blog-date">
+                                <i class="far fa-calendar-alt me-1"></i> March 18, 2024
+                            </div>
+                            <div class="blog-tags">
+                                <span class="blog-tag">PHP</span>
+                                <span class="blog-tag">Laravel</span>
+                            </div>
+                            <h3 class="blog-title">Building a RESTful API with Laravel 10</h3>
+                            <p class="blog-excerpt">Follow this step-by-step guide to create a robust RESTful API using
+                                Laravel 10, complete with authentication and validation.</p>
+                            <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 4 -->
+                <div class="col-md-6 mb-4">
+                    <div class="blog-card">
+                        <img src="https://via.placeholder.com/600x400/6c63ff/ffffff?text=Bootstrap+5" alt="Bootstrap 5"
+                            class="blog-image">
+                        <div class="blog-content">
+                            <div class="blog-date">
+                                <i class="far fa-calendar-alt me-1"></i> March 10, 2024
+                            </div>
+                            <div class="blog-tags">
+                                <span class="blog-tag">HTML & CSS</span>
+                                <span class="blog-tag">Bootstrap</span>
+                            </div>
+                            <h3 class="blog-title">10 Bootstrap 5 Tips to Speed Up Your Development</h3>
+                            <p class="blog-excerpt">Improve your workflow and build better websites faster with these
+                                helpful Bootstrap 5 tips and tricks.</p>
+                            <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 5 -->
+                <div class="col-md-6 mb-4">
+                    <div class="blog-card">
+                        <img src="https://via.placeholder.com/600x400/6c63ff/ffffff?text=Web+Security"
+                            alt="Web Security" class="blog-image">
+                        <div class="blog-content">
+                            <div class="blog-date">
+                                <i class="far fa-calendar-alt me-1"></i> March 5, 2024
+                            </div>
+                            <div class="blog-tags">
+                                <span class="blog-tag">Web Security</span>
+                                <span class="blog-tag">Web Development</span>
+                            </div>
+                            <h3 class="blog-title">Essential Web Security Practices for Developers</h3>
+                            <p class="blog-excerpt">Learn about common security vulnerabilities and how to protect your
+                                web applications from attacks.</p>
+                            <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 6 -->
+                <div class="col-md-6 mb-4">
+                    <div class="blog-card">
+                        <img src="https://via.placeholder.com/600x400/6c63ff/ffffff?text=MySQL+Database"
+                            alt="MySQL Database" class="blog-image">
+                        <div class="blog-content">
+                            <div class="blog-date">
+                                <i class="far fa-calendar-alt me-1"></i> February 28, 2024
+                            </div>
+                            <div class="blog-tags">
+                                <span class="blog-tag">MySQL</span>
+                                <span class="blog-tag">Database</span>
+                            </div>
+                            <h3 class="blog-title">Database Design Best Practices for Web Applications</h3>
+                            <p class="blog-excerpt">Explore the key principles of effective database design and how to
+                                optimize your MySQL databases for web applications.</p>
+                            <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="../index.html" class="btn btn-primary">Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google AdSense Ad Slot -->
+    <div class="container text-center my-5 ad-container">
+        <div class="ad-disclaimer mb-2">
+            <small>Advertisement</small>
+        </div>
+        <div class="ad-slot">
+            <!-- Replace this comment with your actual AdSense code when you have it -->
+            <div style="background-color: #f8f9fa; padding: 20px; border-radius: 5px; border: 1px dashed #ced4da;">
+                <p class="mb-0">Ad Space - Your Advertisement Could Be Here</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>My Portfolio</h5>
+                    <p>Building responsive websites and dynamic web applications.</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms and Conditions</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="projects.html">Detailed Projects</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p class="copyright">&copy; 2024 Umer Shabbeer. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        // Simple filter functionality (not actual filtering for this demo)
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    // Here you would typically filter the blog posts
+                    // This is just a UI demo without actual filtering
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
